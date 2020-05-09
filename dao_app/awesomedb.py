@@ -1,6 +1,7 @@
 import attr
 
 
+# it is simple "database"
 @attr.s(slots=False)
 class AwesomeDB:
     url: str = attr.ib(default=None)
