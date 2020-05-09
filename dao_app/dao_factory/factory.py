@@ -1,11 +1,12 @@
-from dao_app.dao_factory.awesomedb_factory import AwesomeDBFACTORY
+from dao_app.dao_factory.awesomedb.awesomedb_factory import AwesomeDBFACTORY
+from dao_app.dao_factory.microservices.microservices_factory import MicroservicesFACTORY
 
 
 class DAOFactory:
     DAO_LIST = ['awesomedb']
-    import dao_app.dao_factory.awesomedb_factory
     DAO_OBJECTS = {
-        'awesomedb': AwesomeDBFACTORY()
+        'awesomedb': AwesomeDBFACTORY(),
+        'microservices': MicroservicesFACTORY(),
     }
 
     def getDAOFactory(self, whichFactory: str):

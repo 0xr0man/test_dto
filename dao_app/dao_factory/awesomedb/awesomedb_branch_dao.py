@@ -8,8 +8,9 @@ import attr
 class AwesomeDBBranchDAO:
     awesome_db: AwesomeDB = attr.ib(default=None)
 
-    def get_branch(self, bid):
-        return self.awesome_db.get(query={'bid': bid})
+    def get_branch(self, branch: BranchDTO):
+        branch = self.awesome_db.get(query={'bid': branch.bid})
+        return BranchDTO(**branch) if branch else None
         # return Transfer obj
 
     # Transfer object

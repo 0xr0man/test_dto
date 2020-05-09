@@ -1,14 +1,12 @@
 import dao_app.dao_factory.factory as df
-import dao_app.dao_factory.modules
-import dao_app.dao_factory.awesomedb_branch_dao as fd
+import dao_app.dao_factory.awesomedb.awesomedb_branch_dao as fd
 from dao_app.awesomedb import AwesomeDB
 # from dao_factory.factory import DAOFactory
 # from dao_factory.awesomedb_branch_dao import AwesomeDBBranchDAO
 
 
-# наследоваться от DBFACtory
 class AwesomeDBFACTORY:
-    db_url = "awesomedburl"
+    db_url = "awesomedb_url"
     db_instance = None
 
     def create_connection(self, table: str):
