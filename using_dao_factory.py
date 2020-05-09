@@ -10,7 +10,7 @@ branchDAO = awesome_db_dao_factory.get_branch_dao()
 microservices_factory = dao_factory.getDAOFactory(whichFactory="microservices")
 userDAO = microservices_factory.get_users_mc_dao()
 
-# it is branch module realization with
+# it is branch module realization with create, delete, get operations
 
 
 class Branch:
